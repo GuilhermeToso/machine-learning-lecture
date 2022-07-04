@@ -165,6 +165,8 @@ class SLFramework():
         ax.legend(title="Classe")
         plt.xticks(fontsize=20)
         plt.yticks(fontsize=20)
+        plt.xlabel("Cor (nm)", fontsize=20)
+        plt.ylabel("Álcool (%)", fontsize=20)
         plt.show()
 
 
@@ -215,10 +217,6 @@ class SLFramework():
                         c=y_colors[row_ix])
         plt.xticks(fontsize=24)
         plt.yticks(fontsize=24)
+        plt.xlabel("Cor (nm)", fontsize=20)
+        plt.ylabel("Álcool (%)", fontsize=20)
         plt.show()
-
-f = SLFramework()
-f.load_sl_model()
-
-f.plot_decision_boundary()
-f.plot_decision_boundary("test")
