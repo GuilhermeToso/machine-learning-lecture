@@ -157,10 +157,10 @@ class SLFramework():
         labels = ["Vinho", "Cerveja", 'Whisky']
         color = [self.hp.wine_color, self.hp.beer_color, self.hp.whisky_color]
         for i in range(3):
-            x_1, x_2 = self.data.df.Cor.to_numpy(), self.data.df.Alcool.to_numpy()
+            feature_1, feature_2 = self.data.df.Cor.to_numpy(), self.data.df.Alcool.to_numpy()
             row_idx = np.where(y == i)
-            x_1, x_2 = x_1[row_idx], x_2[row_idx]
-            ax.scatter(x_1, x_2, c=color[i], label=labels[i], edgecolors='black')
+            feature_1, feature_2 = feature_1[row_idx], feature_2[row_idx]
+            ax.scatter(feature_1, feature_2, c=color[i], label=labels[i], edgecolors='black')
 
         ax.legend(title="Classe")
         plt.xticks(fontsize=20)
