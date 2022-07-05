@@ -16,9 +16,9 @@ class Hyperparameters():
     def __init__(self) -> None:
         super().__init__()
 
-        self.wine_color = "#892E4A"
-        self.beer_color = "#D98E04"
-        self.whisky_color = "#A63F03"
+        self.wine_color = "#C909DE"
+        self.beer_color = "#F5F116"
+        self.whisky_color = "#F56C00"
 
         self.wine_color_mean = 500
         self.wine_color_std = 8
@@ -161,7 +161,7 @@ class SSLFramework():
         
         _, inverse_index = np.unique(y, return_inverse=True)
 
-        colors = np.array([[137,46,74,204], [217,142,4,204],[166,63,3,204]],dtype=np.float32)
+        colors = np.array([[201, 9, 222,204], [245, 241, 22,204],[166,63,3,204]],dtype=np.float32)
         colors /= 255.
 
         y_colors = colors[inverse_index]
